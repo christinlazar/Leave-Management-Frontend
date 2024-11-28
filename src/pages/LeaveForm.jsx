@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { toast, Toaster } from 'sonner'
 import UserNavBar from '../components/userNavBar'
-import UserSideBar from '../components/userSideBar'
 import { submitLeaveData } from '../Api/userApi'
-
 function LeaveForm() {
   const [startDate, setStartDate] = useState('')
   const [endDate, setEndDate] = useState('')
   const [comment, setComment] = useState('')
   const [leaveType, setleaveType] = useState('')
   const today = new Date().toISOString().split("T")[0]
-
   const reset = () => {
     setStartDate('')
     setEndDate('')
@@ -66,7 +63,6 @@ function LeaveForm() {
   return (
     <>
       <UserNavBar />
-      {/* <UserSideBar /> */}
       <Toaster richColors position='bottom-right' />
       <form className="mt-20 w-full max-w-lg mx-auto px-4 md:px-0">
         <div className="card font-montserrat text-sm mt-12 shadow-2xl bg-white p-6 rounded-lg">

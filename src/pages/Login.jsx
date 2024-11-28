@@ -51,7 +51,7 @@ function Login() {
 
             }
         } catch (error) {
-            console.error("error is",error)
+            return toast.error("Something unexpected happend")
         }
     }
   return (

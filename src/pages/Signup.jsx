@@ -52,11 +52,9 @@ function Signup() {
             },2000)
           }
       } catch (error) {
-          console.error(error)
+          return toast.error("Something unexpected happend")
       }
   }
-
-
 return (
   <div className="flex h-screen bg-gray-100">
       <Toaster richColors  position='bottom-right'/>

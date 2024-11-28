@@ -11,13 +11,10 @@ import UserNavBar from '../components/userNavBar';
 import UserSideBar from '../components/userSideBar';
 import { getLeaveData } from '../Api/userApi';
 import { toast } from 'sonner';
-
 ChartJS.register(Title, Tooltip, Legend, ArcElement);
-
 const PieChartComponent = () => {
   const [chartData, setChartData] = useState([]);
   const [userData, setUserData] = useState({});
-
   useEffect(() => {
     const fetchLeaveData = async () => {
       try {
@@ -34,7 +31,6 @@ const PieChartComponent = () => {
     };
     fetchLeaveData();
   }, []);
-
   const data = {
     labels: ['Sick Leave', 'Casual Leave', 'Earned Leave'],
     datasets: [
@@ -47,7 +43,6 @@ const PieChartComponent = () => {
       },
     ],
   };
-
   const options = {
     responsive: true,
     plugins: {
@@ -59,13 +54,10 @@ const PieChartComponent = () => {
       },
     },
   };
-
   return (
     <>
       <UserNavBar />
-      {/* <UserSideBar /> */}
       <div className="min-h-screen p-4 md:p-8 flex flex-col items-center">
-        {/* Table */}
         <div className="w-full max-w-4xl">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 p-2">
             <h2 className="text-lg font-bold">Dashboard:</h2>
@@ -107,7 +99,6 @@ const PieChartComponent = () => {
             </table>
           </div>
         </div>
-        {/* Chart */}
         <div className="flex flex-col items-center justify-center mt-10 md:mt-20 w-full">
           <div className="chart-container w-full max-w-md bg-gray-100 rounded-lg shadow-md p-4">
             <h2 className="text-center text-lg font-semibold mb-4">Leave Type Distribution</h2>
