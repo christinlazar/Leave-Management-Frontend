@@ -35,3 +35,12 @@ export const getLeaveData = async ()=>{
         return error
     }
 }
+
+export const fetchRestricteddates = async ()=>{
+    try {
+        const result = await Api.get(userRoute.fecthrestricteddates)
+        return result
+    } catch (error) {
+        return error
+    }
+}

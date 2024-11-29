@@ -30,7 +30,6 @@ function Login() {
           }
             const formData = {email,password}
             const response = await login(formData)
-            console.log("response is",response)
             setEmail('')
             setPassword('')
             if(response.status == 404 ){

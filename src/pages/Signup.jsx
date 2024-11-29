@@ -36,7 +36,6 @@ function Signup() {
               name,email,password
           }
           const response = await signup(formData)
-          console.log("esponse",response)
           setName('')
           setEmail('')
           setPassword('')
